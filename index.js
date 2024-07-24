@@ -24,9 +24,9 @@ const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return (error);
         }
-        return console.log('Message sent: %s', info.messageId);
+        return('Message sent: %s', info.messageId);
     })
 }
 
@@ -54,9 +54,9 @@ const htmlEmail = (Host, Port, Username, Password, To, From, Subject, Html) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return (error);
         }
-        return console.log('Message sent: %s', info.messageId);
+        return ('Message sent: %s', info.messageId);
     })
 }
 
