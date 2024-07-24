@@ -1,7 +1,9 @@
 const nodemailer = require('nodemailer');
 
+// Sends text only emails
 const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
-    const isSecure = port === 465;
+    // if port provided is 465 return true else false
+    const isSecure = Port === 465;
 
     const transporter = nodemailer.createTransport({
         host: Host,
@@ -24,8 +26,38 @@ const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
         if (error) {
             return console.log(error);
         }
-        console.log('Message sent: %s', info.messageId);
+        return console.log('Message sent: %s', info.messageId);
     })
 }
 
-module.exports = {textEmail}
+// Sends emails with html body
+const htmlEmail = (Host, Port, Username, Password, To, From, Subject, Html) => {
+    // if port provided is 465 return true else false
+    const isSecure = port === 465;
+
+    const transporter = nodemailer.createTransport({
+        host: Host,
+        port: Port,
+        secure: isSecure,
+        auth: {
+            user: Username,
+            pass: Password, 
+        }
+    });
+    
+    const mailOptions = {
+        from: From,
+        to: To,
+        subject: Subject,
+        html: Html,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        return console.log('Message sent: %s', info.messageId);
+    })
+}
+
+module.exports = {textEmail, htmlEmail}
