@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/David-Billingsley/Easy_Email_Template/issues"
   },
-  "homepage": "https://github.com/David-Billingsley/Easy_Email_Template"
+  "homepage": "https://github.com/David-Billingsley/Easy_Email_Template",
+  "keywords": [
+    "Email Wrapper"
+  ]
 }
