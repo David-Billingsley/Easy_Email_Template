@@ -5,7 +5,7 @@ const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
     // if port provided is 465 return true else false
     const isSecure = Port === 465;
 
-    const transporter = nodemailer.createTransport({
+    const login = nodemailer.createTransport({
         host: Host,
         port: Port,
         secure: isSecure,
@@ -15,14 +15,14 @@ const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
         }
     });
     
-    const mailOptions = {
+    const message = {
         from: From,
         to: To,
         subject: Subject,
         text: Body,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    login.sendMail(message, (error, info) => {
         if (error) {
             return (error);
         }
@@ -35,7 +35,7 @@ const htmlEmail = (Host, Port, Username, Password, To, From, Subject, Html) => {
     // if port provided is 465 return true else false
     const isSecure = port === 465;
 
-    const transporter = nodemailer.createTransport({
+    const login = nodemailer.createTransport({
         host: Host,
         port: Port,
         secure: isSecure,
@@ -45,14 +45,14 @@ const htmlEmail = (Host, Port, Username, Password, To, From, Subject, Html) => {
         }
     });
     
-    const mailOptions = {
+    const message = {
         from: From,
         to: To,
         subject: Subject,
         html: Html,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    login.sendMail(message, (error, info) => {
         if (error) {
             return (error);
         }
