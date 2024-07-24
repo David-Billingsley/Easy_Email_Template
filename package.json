@@ -1,6 +1,6 @@
 {
   "name": "easy-email-template",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A module for quick and easy email sending.",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/David-Billingsley/Easy_Email_Template",
   "keywords": [
-    "Email-Wrapper",
-    "Email-Template"
+    "email-wrapper",
+    "email-template"
   ]
 }
