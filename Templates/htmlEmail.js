@@ -24,10 +24,11 @@ const emailwithhtml = (Host, Port, Username, Password, To, From, Subject, Html) 
 
     login.sendMail(message, (error, info) => {
         if (error) {
-            return (error);
+            return error;
         }
-        return ('Message sent: %s', info.messageId);
+        const id = info.messageId
+        return id;
     })
 }
 
-module.exports = {emailwithhtml}
+module.exports = { emailwithhtml }

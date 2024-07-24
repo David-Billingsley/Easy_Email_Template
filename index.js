@@ -1,13 +1,14 @@
 const { emailwithhtml } = require('./Templates/htmlEmail')
 const { textonly } = require('./Templates/textEmail')
 
-const textEmail = (Host, Port, Username, Password, To, From, Subject, Body) => {
-    textonly(Host, Port, Username, Password, To, From, Subject, Body)
-    return true
+const textEmail = async (Host, Port, Username, Password, To, From, Subject, Body) => {
+    const result = await textonly(Host, Port, Username, Password, To, From, Subject, Body)
+    return result
 }
 
-const htmlEmail = (Host, Port, Username, Password, To, From, Subject, Html) => {
-    emailwithhtml(Host, Port, Username, Password, To, From, Subject, Html)
+const htmlEmail = async (Host, Port, Username, Password, To, From, Subject, Html) => {
+    const result = await emailwithhtml(Host, Port, Username, Password, To, From, Subject, Html)
+    return result
 }
 
 module.exports = { textEmail, htmlEmail }

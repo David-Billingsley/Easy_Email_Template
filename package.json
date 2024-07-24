@@ -1,7 +1,7 @@
 {
   "name": "easy-email-template",
-  "version": "0.0.5",
-  "description": "A module for quick and easy email sending.",
+  "version": "0.0.7",
+  "description": "A module for quick and easy email sending.  This is an easy to use wrapper for Nodemailer.",
   "main": "index.js",
   "repository": {
     "type": "git",
