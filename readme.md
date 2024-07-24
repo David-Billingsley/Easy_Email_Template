@@ -6,7 +6,7 @@
 ## textEmail
     This function sends email with only text based body.
 
-    Example: 
+    To call the function after importing please do the following ( replacing the placeholders with your info ):
         textEmail('smtp.office365.com', 587, 'user@user.com', 'password', 'user2@user.com', 'user@user.com', 'this is the subject', 'this is the body')
 
     Requirments:
