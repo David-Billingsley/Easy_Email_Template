@@ -4,8 +4,12 @@
   "description": "A module for quick and easy email sending.",
   "main": "index.js",
   "scripts": {
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Billingsley",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
 }
