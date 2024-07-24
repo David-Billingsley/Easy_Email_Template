@@ -1,7 +1,7 @@
-# easy_email_template
+# easy-email-template
     This is to allow beginners to easily send emails.  This project contains some
     basic templates.  This package is only possible due to the nodemailer package.  
-    This is just an easy wraper for users to use nodemailer in a quick way.
+    This is just an easy wrapper for users to use nodemailer in a quick way.
 
 ## textEmail
     This function sends email with only text based body.
@@ -9,7 +9,7 @@
     To call the function after importing please do the following ( replacing the placeholders with your info ):
         textEmail('smtp.office365.com', 587, 'user@user.com', 'password', 'user2@user.com', 'user@user.com', 'this is the subject', 'this is the body')
 
-    Requirments:
+    Requirements:
         Host - This is the SMTP host address for your server
         Port - The port number for your email server
         Username -  The senders email username 
@@ -22,7 +22,7 @@
 ## htmlEmail    
     This function sends email with only html based body.
 
-    Requirments:
+    Requirements:
         Host - This is the SMTP host address for your server
         Port - The port number for your email server
         Username -  The senders email username 
