@@ -6,6 +6,9 @@
 ## textEmail
     This function sends email with only text based body.
 
+    Example: 
+        textEmail('smtp.office365.com', 587, 'user@user.com', 'password', 'user2@user.com', 'user@user.com', 'this is the subject', 'this is the body')
+
     Requirments:
         Host - This is the SMTP host address for your server
         Port - The port number for your email server
