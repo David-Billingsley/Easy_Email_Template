@@ -1,7 +1,7 @@
-# EmailTemplate
+# easy_email_template
     This is to allow beginners to easily send emails.  This project contains some
     basic templates.  This package is possible due to nodemailer.  This is just an 
-    easy wraper for users to use node mailer
+    easy wraper for users to use nodemailer.
 
 ## textEmail
     This function sends email with only text based body.
