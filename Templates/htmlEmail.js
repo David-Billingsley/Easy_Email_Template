@@ -22,13 +22,15 @@ const emailwithhtml = (Host, Port, Username, Password, To, From, Subject, Html) 
         html: Html,
     };
 
-    login.sendMail(message, (error, info) => {
-        if (error) {
-            return error;
-        }
-        const id = info.messageId
-        return id;
-    })
+    login.sendMail(message)
+        .then(info => {
+            console.log('Message sent: %s', info.messageId);
+            return info.messageId;
+        })
+        .catch(error => {
+            console.error('Error sending email:', error);
+            throw error;
+        });
 }
 
 module.exports = { emailwithhtml }

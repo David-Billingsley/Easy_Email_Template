@@ -22,13 +22,16 @@ const textonly = async (Host, Port, Username, Password, To, From, Subject, Body)
         text: Body,
     };
 
-    login.sendMail(message, (error, info) => {
-        if (error) {
-            return error;
-        }
-        const id = info.messageId
-        return id;
-    })
+    login.sendMail(message)
+        .then(info => {
+            console.log('Message sent: %s', info.messageId);
+            return info.messageId;
+        })
+        .catch(error => {
+            console.error('Error sending email:', error);
+            throw error;
+        });
 }
+
 
 module.exports = { textonly }
