@@ -1,6 +1,6 @@
 {
   "name": "easy_email_template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A module for quick and easy email sending.",
   "main": "index.js",
   "repository": {
