@@ -22,6 +22,7 @@
   "homepage": "https://github.com/David-Billingsley/Easy_Email_Template",
   "keywords": [
     "email-wrapper",
-    "email-template"
+    "email-template",
+    "easy-email-send"
   ]
 }
