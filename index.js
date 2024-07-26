@@ -13,9 +13,9 @@ const htmlEmail = async (Host, Port, Username, Password, To, CC, BCC, From, Subj
 }
 
 // attachments has a data type of JSON
-const attchemntEmail = async (Host, Port, Username, Password, To, CC, BCC, From, Subject, Html, attachment) => {
+const attachemntEmail = async (Host, Port, Username, Password, To, CC, BCC, From, Subject, Html, attachment) => {
     const result = await attachmentonly(Host, Port, Username, Password, To, CC, BCC, From, Subject, Html, attachment)
     return result
 }
 
-module.exports = { textEmail, htmlEmail, attchemntEmail }
+module.exports = { textEmail, htmlEmail, attachemntEmail }
