@@ -1,6 +1,6 @@
 [
     {
-        filename: 'file.txt',
-        path: '/path/to/file.txt'
+        "filename": "file.txt",
+        "path": "/path/to/file.txt"
     }
 ]
