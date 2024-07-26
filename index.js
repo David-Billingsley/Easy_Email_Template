@@ -1,3 +1,4 @@
+const { attachmentonly } = require('./Templates/attchmenttEmail')
 const { emailwithhtml } = require('./Templates/htmlEmail')
 const { textonly } = require('./Templates/textEmail')
 
@@ -11,4 +12,10 @@ const htmlEmail = async (Host, Port, Username, Password, To, From, Subject, Html
     return result
 }
 
-module.exports = { textEmail, htmlEmail }
+// attachments has a data type of JSON
+const attchemntEmail = async (Host, Port, Username, Password, To, From, Subject, Html, attachment) => {
+    const result = await attachmentonly(Host, Port, Username, Password, To, From, Subject, Html, attachment)
+    return result
+}
+
+module.exports = { textEmail, htmlEmail, attchemntEmail }

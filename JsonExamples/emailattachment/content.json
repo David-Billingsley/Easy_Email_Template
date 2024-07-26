@@ -1,0 +1,10 @@
+[
+    {
+        "filename": "file1.txt",
+        "content": "the text in file 1"
+    },
+    {
+        "filename": "file2.txt",
+        "content": "attchemnt 2 text"
+    }
+]
