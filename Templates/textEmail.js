@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 // Sends text only emails
-const textonly = async (Host, Port, Username, Password, To, From, Subject, Body) => {
+const textonly = async (Host, Port, Username, Password, To, CC, BCC, From, Subject, Body) => {
     // if port provided is 465 return true else false
     const isSecure = Port === 465;
 
@@ -18,6 +18,8 @@ const textonly = async (Host, Port, Username, Password, To, From, Subject, Body)
     const message = {
         from: From,
         to: To,
+        cc: CC,
+        bcc: BCC,
         subject: Subject,
         text: Body,
     };

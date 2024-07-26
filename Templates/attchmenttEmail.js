@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 // Sends text only emails with attachments.  Data type of attachments is JSON.
 // There are two different methods to pass Attachments, please see the folder JsonExamples\eamilattachment to see the methods
-const attachmentonly = async (Host, Port, Username, Password, To, From, Subject, Body, listofattachments) => {
+const attachmentonly = async (Host, Port, Username, Password, To, CC, BCC, From, Subject, Body, listofattachments) => {
     // if port provided is 465 return true else false
     const isSecure = Port === 465;
 
@@ -19,6 +19,8 @@ const attachmentonly = async (Host, Port, Username, Password, To, From, Subject,
     const message = {
         from: From,
         to: To,
+        cc: CC,
+        bcc: BCC,
         subject: Subject,
         text: Body,
         attachments: listofattachments

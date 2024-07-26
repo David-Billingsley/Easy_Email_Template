@@ -13,15 +13,19 @@
 
     To call the function after importing please do the following ( replacing
     the placeholders with your info ): textEmail('smtp.office365.com', 587, 
-    'user@user.com', 'password', 'user2@user.com', 'user@user.com', 
-    'this is the subject', 'this is the body')
+    'user@user.com', 'password', 'user2@user.com', 'CC@user.com', 'BCC@user.com',
+    'user@user.com', 'this is the subject', 'this is the body')
 
     Requirements:
         Host - This is the SMTP host address for your server
         Port - The port number for your email server
         Username -  The senders email username 
         Password - The senders email password 
-        To - Who do you want in the To email line 
+        To - Who do you want in the To email line
+        CC - If you want to carbon copy, can be left blank. Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']
+        BCC - If you want to blind copy someone, can be left blank Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']
         From - Who you are sending the email to 
         Subject- The subject line of the email 
         Body - The text you wish to send in the email
@@ -34,7 +38,11 @@
         Port - The port number for your email server
         Username -  The senders email username 
         Password - The senders email password 
-        To - Who do you want in the To email line 
+        To - Who do you want in the To email line
+        CC - If you want to carbon copy, can be left blank. Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']
+        BCC - If you want to blind copy someone, can be left blank Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']  
         From - Who you are sending the email to 
         Subject- The subject line of the email 
         html - The html you wish to send in the email
@@ -54,6 +62,10 @@
         Username -  The senders email username 
         Password - The senders email password 
         To - Who do you want in the To email line 
+        CC - If you want to carbon copy, can be left blank. Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']
+        BCC - If you want to blind copy someone, can be left blank Value should be in [] 
+        separated by comma.  Example ['user2@user.com', 'user3@user.com']   
         From - Who you are sending the email to 
         Subject- The subject line of the email 
         Body - The text you wish to send in the email

@@ -1,9 +1,9 @@
 const nodemailer = require('nodemailer');
 
 // Sends emails with html body
-const emailwithhtml = (Host, Port, Username, Password, To, From, Subject, Html) => {
+const emailwithhtml = (Host, Port, Username, Password, To, CC, BCC, From, Subject, Body) => {
     // if port provided is 465 return true else false
-    const isSecure = port === 465;
+    const isSecure = Port === 465;
 
     const login = nodemailer.createTransport({
         host: Host,
@@ -18,8 +18,10 @@ const emailwithhtml = (Host, Port, Username, Password, To, From, Subject, Html) 
     const message = {
         from: From,
         to: To,
+        cc: CC,
+        bcc: BCC,
         subject: Subject,
-        html: Html,
+        text: Body,
     };
 
     login.sendMail(message)
